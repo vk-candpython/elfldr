@@ -84,7 +84,7 @@
 |---------|-------------|
 | 🏗️ **MUSL/GCC Auto-detect** | Prefers MUSL for smaller output, falls back to GCC |
 | 📦 **Custom Linker Script** | Random base address (0x400000 + random*0x1000), discards all unused sections |
-| 🚫 **Compiler Flags** | `-Os -no-pie -fomit-frame-pointer -fno-stack-protector -Wl,--strip-all` |
+| 🚫 **Compiler Flags** | `-Os -static-pie -fomit-frame-pointer -fno-stack-protector -Wl,--strip-all` |
 | 🧹 **SSTRIP** | Removes section headers completely — breaks `objdump`, `readelf`, `gdb` |
 
 ### Runtime Protection
@@ -354,7 +354,7 @@ original_elf  →  elfobf-original_elf
 |-------------|----------|
 | 🏗️ **Автовыбор MUSL/GCC** | Предпочитает MUSL для меньшего размера |
 | 📦 **Кастомный линкер-скрипт** | Случайный базовый адрес, сбрасывает все неиспользуемые секции |
-| 🚫 **Флаги компилятора** | `-Os -no-pie -fomit-frame-pointer -fno-stack-protector -Wl,--strip-all` |
+| 🚫 **Флаги компилятора** | `-Os -static-pie -fomit-frame-pointer -fno-stack-protector -Wl,--strip-all` |
 | 🧹 **SSTRIP** | Полное удаление заголовков секций — ломает `objdump`, `readelf`, `gdb` |
 
 ### Защита времени выполнения

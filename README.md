@@ -135,7 +135,7 @@
 
 ```
 PHASE 1: ELF VALIDATION
-├── Checks ELF magic (\x7FELF)
+├── Checks ELF magic (\x7FELF\x02)
 ├── Validates x86_64 architecture
 └── Memory-maps file with MADV_SEQUENTIAL
 

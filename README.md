@@ -201,26 +201,36 @@ python3 elfobf.py /bin/ls
 
 **Output:**
 ```
+python elfobf.py /usr/sbin/msrtool                                    
+
 [  OK  ]: architecture is valid (x86_64)
-[  OK  ]: using compiler(/usr/bin/musl-gcc)
+[  OK  ]: using compiler(/usr/bin/gcc)
 
-[ INFO ]: Start processing -> /bin/ls
 
-[ INFO ]: obfuscating: ELF(/bin/ls)
-[ INFO ]: compressing: {####################} 100%  (DONE)
-[  OK  ]: compressed:  (142144 -> 89123) bytes  |  saved: 53021 bytes (37.3%)
-[ INFO ]: encrypting:  {####################} 100%  (DONE)
+
+[  OK  ]: make build dir(./_mkelfobf)
+
+
+
+[ INFO ]: Start processing -> /usr/sbin/msrtool
+                                                                                                                                                           
+[ INFO ]: obfuscating: ELF(/usr/sbin/msrtool)
+[ INFO ]: compressing: {--------------------} 100%  (DONE)
+[  OK  ]: compressed:  (53013584 -> 1114638) bytes  |  saved: 51898946 bytes (97.9%)
+[ INFO ]: encrypting:  {--------------------} 100%  (DONE)
 [ BUILD ]: file(./_mkelfobf/link.ld)
 [ BUILD ]: file(./_mkelfobf/payload.bin)
 [ BUILD ]: file(./_mkelfobf/loader.c)
 [ BUILD ]: file(./_mkelfobf/sstrip.elf)
 [  OK  ]: compiled  .................  (DONE)
 [  OK  ]: striped   .................  (DONE)
-[ INFO ]: time      .................  (1.23s)
-[  OK  ]: outfile(./elfobf-ls, 45678 bytes)
-[  OK  ]: obfuscation complete ELF(/bin/ls)
+[ INFO ]: time      .................  (3.70s)
+[  OK  ]: outfile(./elfobf-msrtool, 1124384 bytes)
+[  OK  ]: obfuscation complete ELF(/usr/sbin/msrtool)
 
-[ INFO ]: End processing -> /bin/ls
+[ INFO ]: End processing -> /usr/sbin/msrtool                                                                                                              
+
+
 
 [  OK  ]: cleanup build dir(./_mkelfobf)
 ```

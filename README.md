@@ -187,16 +187,16 @@ End of processing -> myapp.elf
 The loader (`lindef.h`) exposes three compile‑time switches that control its behaviour:
 
 ```c
-#define USING_ANTI_VM      1
-#define USING_ANTI_SANDBOX 1
-#define USING_ANTI_DEBUG   1
+#define USING_ANTI_VM      FALSE
+#define USING_ANTI_SANDBOX FALSE
+#define USING_ANTI_DEBUG   FALSE
 ```
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| **`USING_ANTI_VM`** | `1` | Enables detection of virtualised environments |
-| **`USING_ANTI_SANDBOX`** | `1` | Enables container/sandbox detection |
-| **`USING_ANTI_DEBUG`** | `1` | Enables anti‑debugging checks |
+| **`USING_ANTI_VM`** | `FALSE` | Enables detection of virtualised environments |
+| **`USING_ANTI_SANDBOX`** | `FALSE` | Enables container/sandbox detection |
+| **`USING_ANTI_DEBUG`** | `FALSE` | Enables anti‑debugging checks |
 
 > Changing any flag requires rebuilding the loader stub before packing.
 
@@ -297,9 +297,9 @@ python3 elflhr.py myapp.elf
 Загрузчик (`lindef.h`) предоставляет три compile‑time флага:
 
 ```c
-#define USING_ANTI_VM      1
-#define USING_ANTI_SANDBOX 1
-#define USING_ANTI_DEBUG   1
+#define USING_ANTI_VM      FALSE
+#define USING_ANTI_SANDBOX FALSE
+#define USING_ANTI_DEBUG   FALSE
 ```
 
 | Флаг | Описание |
